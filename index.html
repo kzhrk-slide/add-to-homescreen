@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maintainable CSS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3, h4 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      li {
+        margin-top: 10px;
+      }
+      li:first-child {
+        margin-top: 0;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .big {
+        font-size: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+
+# Add to Home Screen
+
+2016/06/29
+
+Kobayashi Kazuhiro (kzhrk)
+
+
+---
+class: center, middle
+
+
+# What is "Add to Home Screen"?
+
+
+---
+
+
+## Long long time ago...
+
+HTML/CSS/JavaScriptで実装
+
+- [Google Code Archive - Long-term storage for Google Code Project Hosting.](https://code.google.com/archive/p/mobile-bookmark-bubble/)
+- [Add to home screen – Matteo Spinelli's Cubiq.org](http://cubiq.org/add-to-home-screen)
+
+
+---
+
+
+## Native Add to Home Screen
+
+Android Chrome 42以降で、Webアプリ（Webサイト）のホーム画面登録を促すポップアップ表示が実装されている。
+
+[Increasing Engagement with Web App Install Banners | Web Updates - Google Developers](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android)
+
+
+---
+
+
+## 対応デバイス・OS　💻 📱
+
+- Android Chrome 42以降
+- iOS 🙅
+
+
+---
+
+
+## その他の条件
+
+- HTTPS接続 📰
+
+
+---
+
+
+# implement
+## https - lets encript
+## manifest.json
+
+https://w3c.github.io/manifest/
+
+response header must be application/json
+古いChromeのDevTools > Network > Filter:Manifestではmanifest.jsonの通信が確認できない
+Android Chromeなので、USB Debugで実機確認するのが吉。
+
+## about debug
+- キャッシュの削除
+- デバイスの設定時間変更
+- chrome://flags/#bypass-app-banner-engagement-checks の有効化
+
+# about sugotoku
+## change json by query
+https://www.dcm-b.jp/snp-api/getManifestJson.json?contentId=01cpn211001
+
+## about wait time
+https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
+5分
+
+---
+class: center, middle
+
+
+# END
+
+
+    </textarea>
+    <script src="js/remark.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
