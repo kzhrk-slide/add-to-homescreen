@@ -81,6 +81,7 @@ Android Chrome 42以降で、Webアプリ（Webサイト）のホーム画面登
 ## その他の条件
 
 - HTTPS接続 📰
+- ServiceWorkerの登録
 - 数時間経過してからアクセス https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
 
 ---
@@ -92,12 +93,29 @@ class: center, middle
 
 ---
 
+
 ## https
 
 - gh-pages
-- VPS + (Let's Encript)[https://letsencrypt.org/]
+- VPS + [Let's Encript](https://letsencrypt.org/)
 
 - (localhost)
+
+
+---
+
+
+## ServiceWorker
+
+```
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/serviceworker.js");
+  }
+</script>
+```
+
+serviceworker.jsは空ファイルでOK 🙆
 
 ---
 
