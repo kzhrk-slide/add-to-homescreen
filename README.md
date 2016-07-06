@@ -1,4 +1,4 @@
-Maintainable CSS
+Add to home screen
 ===
 
-https://kzhrk-slide.github.io/maintainable-css/
+https://kzhrk-slide.github.io/add-to-homescreen/#1
