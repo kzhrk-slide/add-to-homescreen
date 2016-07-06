@@ -1,4 +1,4 @@
 Add to home screen
 ===
 
-https://kzhrk-slide.github.io/add-to-homescreen/#1
+https://kzhrk-slide.github.io/add-to-homescreen/

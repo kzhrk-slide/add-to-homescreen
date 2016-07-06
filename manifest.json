@@ -1,0 +1,14 @@
+{
+  "lang": "ja",
+  "name": "add to homescreen",
+  "short_name": "add to homescreen",
+  "icons": [
+    {
+      "src": "http://dummyimage.com/144x144/000/fff",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://kzhrk-slide.github.io/add-to-homescreen/",
+  "display": "browser"
+}
