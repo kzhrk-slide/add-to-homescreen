@@ -81,33 +81,52 @@ Android Chrome 42以降で、Webアプリ（Webサイト）のホーム画面登
 ## その他の条件
 
 - HTTPS接続 📰
+- 数時間経過してからアクセス https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
+
+---
+class: center, middle
+
+
+# 実装
 
 
 ---
 
+## https
 
-# implement
-## https - lets encript
+- gh-pages
+- VPS + (Let's Encript)[https://letsencrypt.org/]
+
+- (localhost)
+
+---
+
 ## manifest.json
+
+- `<link rel="manifest" href="manifest.json">`
+- Response HeadersのContent-Typeはapplication/manifest+json(application/json)
+- Chrome DevTools > Network > Filter:Manifest
 
 https://w3c.github.io/manifest/
 
-response header must be application/json
-古いChromeのDevTools > Network > Filter:Manifestではmanifest.jsonの通信が確認できない
-Android Chromeなので、USB Debugで実機確認するのが吉。
+---
 
-## about debug
-- キャッシュの削除
+## デバッグ
+
+- キャッシュ削除
+- サイトアクセス
 - デバイスの設定時間変更
+- 再度サイトアクセス
+
 - chrome://flags/#bypass-app-banner-engagement-checks の有効化
 
-# about sugotoku
-## change json by query
-https://www.dcm-b.jp/snp-api/getManifestJson.json?contentId=01cpn211001
+---
 
-## about wait time
-https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
-5分
+## サンプル：スゴ得サイト
+
+https://www.dcm-b.jp/cs/cpsite.html?id=01cpn211001
+
+https://www.dcm-b.jp/snp-api/getManifestJson.json?contentId=01cpn211001
 
 ---
 class: center, middle
